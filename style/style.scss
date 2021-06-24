@@ -1,0 +1,496 @@
+body {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.configurator_wrapper * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quincy CF', sans-serif;
+}
+.configurator_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.configurator_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .configurator_header_heading {
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    .configurator_select_image {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .configurator_select_image_item {
+            height: 150px;
+            width: 130px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            &:nth-child(1)::before, &:nth-child(2)::before {
+                content: "Xит продаж!";
+                position: absolute;
+                top: -17px;
+                font-size: 11px;
+                color: red;
+                font-weight: bold;
+                letter-spacing: 1px;
+            }
+            
+            
+            .configurator_select_image_item_img {
+                border: 2px solid #D54523;
+                border-radius: 5px;
+                max-height: 80px;
+                max-width: 80px;
+                height: 100%;
+                width: 100%;
+                margin-bottom: 10px;
+                transition: all 170ms ease-in;
+            }
+            .configurator_select_image_item_header_name {
+                margin-bottom: 5px;
+            }
+            .configurator_select_image_item_logo {
+                max-width: 80px;
+                max-height: 30px;
+                width: 100%;
+                height: 100%;
+            }
+            &:hover {
+                .configurator_select_image_item_img {
+                    box-shadow: 3px 3px 0px 0px #801c1c;
+                }
+            }
+        }
+        .configurator_select_image_item_active {
+            .configurator_select_image_item_img {
+                box-shadow: 3px 3px 0px 0px #801c1c;
+            }
+        }
+    }
+}
+.configurator_section_head {
+    margin-top: 50px;
+    width: 100%;
+    .configurator_body_heading {
+        text-align: center;
+    }
+    .configurator_body_description_heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        position: relative;
+        .configurator_body_description_heading_name {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .configurator_select_image_item_logo {
+            max-width: 80px;
+            max-height: 30px;
+            width: 100%;
+            height: 100%;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translate(-35%, -50%);
+            left: 35%;
+            width: 12%;
+            height: 1px;
+            background: #D54523;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translate(35%, -50%);
+            right: 35%;
+            width: 12%;
+            height: 1px;
+            background: #D54523;
+        }
+    }
+}
+
+.configurator_section_one {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 20px;
+
+    .configurator_section_one_left_column {
+        border: 2px solid #D54523;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 400px;
+        width: 100%;
+        height: auto;
+        margin-right: 5px;
+
+        .configurator_body_image {
+            border-radius: 30px;
+            width: 233px;
+            height: 222px;
+        }
+    }
+    .configurator_section_one_right_column {
+        max-width: 400px;
+        width: 100%;
+        border: 2px solid #D54523;
+        border-radius: 10px;
+        padding: 20px;
+        margin-left: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.configurator_section_two {
+    margin-top: 5px;
+    margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .configurator_footer_heading {
+        text-align: center;
+    }
+    .configurator_section_two_column_one {
+        padding: 20px;
+        border: 2px solid #D54523;
+        border-radius: 15px;
+        max-width: 400px;
+        width: 100%;
+        margin-right: 5px;
+        .configurator_select_fill_wrapper {
+            text-align: center;
+            .configurator_select_fill {
+                display: flex;
+                justify-content: space-evenly;
+                margin: 10px 0;
+                div {
+                    border: 1px solid #D54523;
+                    background: #D54523;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    padding: 3px 6px;
+                    font-weight: bold;
+                    color: #fff;
+                    transition: all 170ms ease-in;
+                    box-shadow: 1px 1px 0px 0px #801c1c;
+                    &:hover {
+                        background: #fff;
+                        color: #D54523;
+                    }
+                }
+                .configurator_select_fill_active {
+                    background: #fff;
+                    color: #D54523;
+                }
+            } 
+        }
+        
+
+        .configurator_footer_payment {
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            p {
+                min-width: 85px;
+            }
+            .configFooterPrice {
+                min-width: 105px;
+                text-align: right;
+                margin-right: 10px;
+            }
+            .configurator_footer_payment_wrapper {
+                display: flex;
+            }
+        }
+        .configurator_footer_freezer {
+            margin: 20px 0;
+            .configurator_footer_freezer_heading {
+                h4 {
+                    font-weight: normal;
+                    margin-bottom: 20px;
+                }
+                span {
+                    font-size: 14px;
+                    font-weight: normal;
+                }
+            }
+            .configurator_footer_freezer_checkbox {
+                border-bottom: 2px solid #D54523;
+
+                .configurator_footer_freezer_checkbox_item {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    padding-bottom: 10px;
+                    
+                    .configurator_footer_checkbox_wrapper {
+                        .configurator_footer_checkbox_wrapper_name {
+                            max-width: 150px;
+                            min-width: 140px;
+                        }
+                        
+                    }
+                    .configurator_footer_payment_wrapper {
+                        display: flex;
+                        .price {
+                            margin-right: 10px;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        .configurator_footer_mixer {
+            margin: 20px 0;
+            h4 {
+                font-weight: normal;
+                margin-bottom: 20px;
+            }
+            border-bottom: 2px solid #D54523;
+            .configurator_footer_mixer_checkbox {
+                .configurator_footer_mixer_checkbox_item {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        padding-bottom: 10px;
+
+                    .configurator_footer_checkbox_wrapper {
+                        .configurator_footer_checkbox_wrapper_name {
+                            max-width: 150px;
+                            min-width: 140px;
+                        }
+                    }
+                    
+                    .configurator_footer_payment_wrapper {
+                        display: flex;
+                        .price {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .configurator_footer_other, .configurator_footer_other2 {
+            margin: 20px 0;
+            .configurator_footer_other_checkbox_item {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    margin: 10px 0;
+                    border-bottom: 2px solid #D54523;
+                    padding-bottom: 10px;
+                .configurator_footer_checkbox_wrapper {
+                    .configurator_footer_checkbox_wrapper_name {
+                        max-width: 150px;
+                        min-width: 140px;
+                    }
+                }
+                .configurator_footer_payment_wrapper {
+                    display: flex;
+                    .configurator_footer_checkbox_wrapper_price {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+        .configurator_footer_total {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+        }
+    }
+    .configurator_section_two_column_two {
+        border: 2px solid #D54523;
+        border-radius: 15px;
+        padding: 20px 40px;
+        max-width: 400px;
+        margin-left: 5px;
+        h2 {
+            margin: 10px 0 30px 0;
+        }
+    }
+}
+
+.configurator_footer_mixer_checkbox_wrapper_item, 
+.configurator_footer_freezer_checkbox_wrapper_item,  
+.configurator_footer_other_checkbox_wrapper_item {
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    background: rgb(201, 201, 201);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    color: #D54523 !important;
+    font-weight: bold;
+}
+
+.configurator_footer_default_checkbox_wrapper_item {
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    background: rgb(201, 201, 201);
+    cursor: default;
+    display: flex;
+    justify-content: center;
+    color: #585858 !important;
+    font-weight: bold;
+}
+
+.configuratorPromt {
+    position:relative;
+    .configuratorPromtHover {
+        cursor: pointer;
+    }
+    .configuratorPromtHidden {
+        display: none;
+        position: absolute;
+        bottom: 130%;
+        left: 0px;
+        background-color: #fff;
+        color: #D54523;
+        padding: 5px;
+        text-align: center;
+        -moz-box-shadow: 0 1px 1px rgba(0,0,0,.16);
+        -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.16);
+        box-shadow: 0 1px 1px rgba(0,0,0,.16);
+        font-size: 16px;
+    }
+
+    .configuratorPromtHover + .configuratorPromtHidden:before {
+        content: " ";
+        position: absolute;
+        top: 98%;
+        left: 10%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        height: 0;
+        width: 0;
+        border: 7px solid transparent;
+        border-right: 7px solid #fff;
+        border-color: #fff transparent transparent transparent;
+        z-index: 2;
+    }
+
+    .configuratorPromtHover + .configuratorPromtHidden:after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 10%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        height: 0;
+        width: 0;
+        border: 7px solid transparent;
+        border-right: 7px solid #fff;
+        border-color: rgba(0,0,0,.16) transparent transparent transparent;
+        z-index: 1;
+    }
+
+    .configuratorPromtHover:hover + .configuratorPromtHidden {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 926px){
+    .configurator_section_two_column_two, 
+    .configurator_section_one_right_column, 
+    .configurator_section_one_left_column,
+    .configurator_section_two_column_one {
+       max-width: 400px !important;
+    }
+}
+
+@media screen and (max-width: 827px) {
+    .configurator_section_two_column_two, 
+    .configurator_section_one_right_column, 
+    .configurator_section_one_left_column,
+    .configurator_section_two_column_one {
+       max-width: 300px !important;
+    }
+}
+@media screen and (max-width: 680px){
+    .configurator_section_head {
+        .configurator_body_description_heading {
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translate(-20%, -50%);
+                left: 20%;
+                width: 12%;
+                height: 1px;
+                background: #D54523;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translate(20%, -50%);
+                right: 20%;
+                width: 12%;
+                height: 1px;
+                background: #D54523;
+            }
+        }
+    }
+}
+@media screen and (max-width: 626px){
+    .configurator_section_two_column_two, 
+    .configurator_section_one_right_column, 
+    .configurator_section_one_left_column,
+    .configurator_section_two_column_one {
+       margin: 5px 5px !important;
+    }
+    .configurator_section_two_column_one {
+        margin: 0 !important;
+    }
+}
+@media screen and (max-width: 406px){
+    .configurator_select_image {
+        .configurator_select_image_item  {
+            border-bottom: 2px solid #D54523;
+            margin-top: 15px;
+        }
+    }
+    .configurator_footer_payment {
+        border-bottom: 2px solid #D54523;
+
+    }
+}
+@media screen and (max-width: 276px){
+    .configurator_select_image {
+        .configurator_select_image_item  {
+            border-bottom: none;
+            margin-top: 15px;
+        }
+    }
+}
